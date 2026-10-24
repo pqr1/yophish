@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yophish | Staff Statistics</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="staff">
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Yophish</h2>
+        <nav class="nav-links">
+          <a href="overview.html">Overview</a>
+          <a href="staff.html">Staff Statistics</a>
+          <a href="campaign.html">New Campaign</a>
+          <a href="result.html">Result</a>
+          <a href="setting.html">Setting</a>
+        </nav>
+      </aside>
+      <main class="page">
+        <h1>Staff Statistics</h1>
+
+        <section class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Name / Email</th>
+                <th>Email Opened</th>
+                <th>Email Not Opened</th>
+                <th>Link Clicked</th>
+                <th>Link Not Clicked</th>
+                <th>Risk Level</th>
+              </tr>
+            </thead>
+            <tbody id="staffTableBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/staff.js"></script>
+  </body>
+</html>

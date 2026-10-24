@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yophish | New Campaign</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="campaign">
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Yophish</h2>
+        <nav class="nav-links">
+          <a href="overview.html">Overview</a>
+          <a href="staff.html">Staff Statistics</a>
+          <a href="campaign.html">New Campaign</a>
+          <a href="result.html">Result</a>
+          <a href="setting.html">Setting</a>
+        </nav>
+      </aside>
+      <main class="page">
+        <h1>Create Campaign</h1>
+
+        <form id="campaignForm" class="campaign-form">
+          <div>
+            <label for="campaignName">Campaign name</label>
+            <input id="campaignName" name="campaignName" placeholder="Quarterly awareness test" required />
+          </div>
+
+          <div>
+            <label for="campaignSubject">Email subject</label>
+            <input
+              id="campaignSubject"
+              name="campaignSubject"
+              placeholder="Update to your account settings"
+              value="Update to your account settings"
+              required
+            />
+          </div>
+
+          <div>
+            <label>Choose a template</label>
+            <div class="template-options" id="templateOptions">
+              <div class="template-card active" data-template="templateA">
+                <strong>Template A</strong>
+                <p style="margin-top:0.5rem; color:#475569">
+                  Account settings update notice with review link.
+                </p>
+              </div>
+              <div class="template-card" data-template="templateB">
+                <strong>Template B</strong>
+                <p style="margin-top:0.5rem; color:#475569">
+                  Account preference confirmation with quick access link.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label for="campaignBody">Email body (HTML allowed)</label>
+            <textarea id="campaignBody" name="campaignBody" rows="6" required>
+<p>Hello,</p>
+
+<p>We are performing routine updates to improve account security and user experience.</p>
+
+<p>If you recently requested a change to your account preferences, you can review the update at the link below:</p>
+
+<p><a href="https://yophish.app/update">Review account update</a></p>
+
+<p>If you did not request any changes, no action is required. This message is for notification purposes only.</p>
+
+<p>Best regards,<br>
+Account Support Team</p>
+            </textarea>
+          </div>
+
+          <div>
+            <label for="recipientList">Recipients (one email per line or comma separated)</label>
+            <textarea
+              id="recipientList"
+              name="recipientList"
+              class="recipient-input"
+              placeholder="alex@example.com&#10;taylor@example.com"
+              required
+            ></textarea>
+          </div>
+
+          <div class="flex-between">
+            <button type="submit">Send campaign</button>
+            <span id="campaignStatus" style="color:#2563eb"></span>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/campaign.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yophish | Results</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="result">
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Yophish</h2>
+        <nav class="nav-links">
+          <a href="overview.html">Overview</a>
+          <a href="staff.html">Staff Statistics</a>
+          <a href="campaign.html">New Campaign</a>
+          <a href="result.html">Result</a>
+          <a href="setting.html">Setting</a>
+        </nav>
+      </aside>
+      <main class="page">
+        <h1>Campaign Results</h1>
+
+        <section class="panel" style="margin-bottom:2rem">
+          <label for="campaignSelect" style="display:block; margin-bottom:0.5rem"
+            >Choose one of your campaigns</label
+          >
+          <select id="campaignSelect"></select>
+        </section>
+
+        <section class="table-card">
+          <div class="flex-between" style="margin-bottom:1rem">
+            <h2 id="resultTitle" style="margin:0">Result summary</h2>
+            <div id="resultStats" style="color:#475569"></div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Opened</th>
+                <th>Not Opened</th>
+                <th>Clicked</th>
+                <th>Not Clicked</th>
+                <th>Risk Level</th>
+              </tr>
+            </thead>
+            <tbody id="resultTableBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/result.js"></script>
+  </body>
+</html>
